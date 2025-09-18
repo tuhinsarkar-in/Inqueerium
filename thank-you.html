@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y3YFCDMB9L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y3YFCDMB9L');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Inqueerium</title>
+    <meta name="description" content="Thank you for participating in Inqueerium, our anonymous research study about LGBTQ+ lives in India.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cookie Notice -->
+    <div id="cookie-notice" class="cookie-notice">
+        <div class="cookie-popup">
+            <div class="cookie-header">
+                <i class="fas fa-cookie-bite"></i>
+                <h3>Cookie Notice</h3>
+            </div>
+            <div class="cookie-body">
+                <p>We use cookies to track demographic data for our research study. This helps us understand participation patterns and ensure representative data collection.</p>
+                <ul class="cookie-details">
+                    <li><i class="fas fa-shield-alt"></i> Your personal data remains completely anonymous</li>
+                    <li><i class="fas fa-chart-line"></i> Only aggregated demographic statistics are collected</li>
+                    <li><i class="fas fa-lock"></i> No personally identifiable information is stored</li>
+                </ul>
+                <p class="cookie-footer">By continuing to use this site, you consent to our use of cookies for research purposes.</p>
+            </div>
+            <div class="cookie-actions">
+                <button onclick="closeCookieNotice()" class="cookie-accept">Accept & Continue</button>
+                <button onclick="learnMoreCookies()" class="cookie-learn-more">Learn More</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Welcome Safety Message -->
+    <div id="welcome-message" class="welcome-modal">
+        <div class="welcome-overlay"></div>
+        <div class="welcome-content">
+            <div class="welcome-header">
+                <h3>Quick Exit Information</h3>
+                <button class="welcome-close" onclick="closeWelcomeMessage()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="welcome-body">
+                <p>Click on the <strong>Quick Exit</strong> button on the navigation bar or press the <strong>ESC</strong> button three times to quickly leave our site.</p>
+            </div>
+            <div class="welcome-footer">
+                <button onclick="closeWelcomeMessage()" class="welcome-btn">Got it</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <span class="logo-text">Inqueerium</span>
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#faq" class="nav-link">FAQ</a>
+                <a href="index.html#results" class="nav-link">Results</a>
+                <a href="survey.html" class="nav-link survey-btn">Take the Survey</a>
+                <button id="emergency-exit" class="emergency-btn" title="Emergency Exit - Instantly redirect to Google">
+                    <i class="fas fa-sign-out-alt"></i> QUICK EXIT
+                </button>
+                <button id="theme-toggle" class="theme-toggle" title="Toggle Dark Mode">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Thank You Hero Section -->
+    <section class="thank-you-hero">
+        <div class="container">
+            <div class="thank-you-content">
+                <div class="thank-you-icon">
+                    <div class="icon-container">
+                        <i class="fas fa-heart"></i>
+                        <div class="icon-rings">
+                            <div class="ring ring-1"></div>
+                            <div class="ring ring-2"></div>
+                            <div class="ring ring-3"></div>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="thank-you-title">Thank You!</h1>
+                <h2 class="thank-you-subtitle">Your Voice Matters</h2>
+                <p class="thank-you-message">
+                    Your participation in Inqueerium is invaluable. By sharing your experiences, you're helping to create a more inclusive and understanding society for LGBTQ+ individuals in India.
+                </p>
+                
+                <div class="thank-you-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">Open</div>
+                            <div class="stat-label">For Everyone</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Anonymous</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">Open</div>
+                            <div class="stat-label">Source</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="thank-you-actions">
+                    <a href="index.html" class="btn btn-primary">
+                        <i class="fas fa-home"></i>
+                        <span>Return Home</span>
+                    </a>
+                    <a href="index.html#results" class="btn btn-secondary">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>View Results</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Happens Next Section -->
+    <section class="next-steps">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Happens Next?</h2>
+                <p>Learn about how your contribution helps our research</p>
+            </div>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Data Processing</h3>
+                    <p>Your responses are securely processed and anonymized to protect your privacy while maintaining research integrity.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Analysis</h3>
+                    <p>Our Inqueerium research team analyzes the collected data to identify patterns, trends, and insights about LGBTQ+ experiences in India.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>Sharing Results</h3>
+                    <p>Findings are shared with the community, researchers, and policymakers to drive positive change and awareness.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Impact</h3>
+                    <p>Your contribution helps create resources, advocacy materials, and support systems for the LGBTQ+ community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Support Section -->
+    <section class="community-support">
+        <div class="container">
+            <div class="support-content">
+                <div class="support-text">
+                    <h2>Need Support?</h2>
+                    <p>If participating in this study has brought up any concerns or if you need support, remember that you're not alone. There are resources and communities ready to help.</p>
+                    
+                    <div class="support-features">
+                        <div class="feature">
+                            <i class="fas fa-phone"></i>
+                            <span>24/7 Helplines Available</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-user-friends"></i>
+                            <span>Community Support Groups</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <span>Mental Health Resources</span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://lgbtqindiaresource.in/" class="btn btn-support">
+                        <i class="fas fa-hands-helping"></i>
+                        <span>Find Support Resources</span>
+                    </a>
+                </div>
+                
+                <div class="support-visual">
+                    <div class="support-circle">
+                        <div class="circle-content">
+                            <i class="fas fa-heart"></i>
+                            <span>You Matter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-rainbow-bg"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-heart rainbow-text"></i>
+                        </div>
+                        <h3>Inqueerium</h3>
+                    </div>
+                    <p class="footer-tagline">Community-led research for positive change and equality</p>
+                    <div class="footer-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">All</span>
+                            <span class="stat-label">Voices Matter</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">28</span>
+                            <span class="stat-label">States</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label">Impact</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section footer-links">
+                    <h4>Quick Links</h4>
+                    <div class="footer-nav">
+                        <a href="#home" class="footer-link">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                        <a href="#about" class="footer-link">
+                            <i class="fas fa-info-circle"></i>
+                            <span>About</span>
+                        </a>
+                        <a href="survey.html" class="footer-link">
+                            <i class="fas fa-clipboard-list"></i>
+                            <span>Survey</span>
+                        </a>
+                        <a href="#results" class="footer-link">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Results</span>
+                        </a>
+                        <a href="#faq" class="footer-link">
+                            <i class="fas fa-question-circle"></i>
+                            <span>FAQ</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section footer-social">
+                    <h4>Share & Connect</h4>
+                    <p class="social-description">Help us reach more voices in the community</p>
+                    <div class="social-buttons">
+                        <button class="social-btn copy-link" onclick="copyLink()" data-tooltip="Copy Link to Share">
+                            <i class="fas fa-link"></i>
+                            <span>Copy Link</span>
+                        </button>
+                        <a href="#" class="social-btn twitter" onclick="shareOnTwitter()" data-tooltip="Share on X (Formerly Twitter)">
+                            <i class="fab fa-x-twitter"></i>
+                            <span>X (Formerly Twitter)</span>
+                        </a>
+                        <a href="#" class="social-btn reddit" onclick="shareOnReddit()" data-tooltip="Share on Reddit">
+                            <i class="fab fa-reddit"></i>
+                            <span>Reddit</span>
+                        </a>
+                        <a href="#" class="social-btn discord" onclick="shareOnDiscord()" data-tooltip="Share on Discord">
+                            <i class="fab fa-discord"></i>
+                            <span>Discord</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section footer-info">
+                    <h4>Important Notice</h4>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <p>This study is community-led and not affiliated with any government or institution. Your participation is completely voluntary and anonymous.</p>
+                        </div>
+                    </div>
+                    <div class="privacy-links">
+                        <a href="privacy-policy.html" class="privacy-link">
+                            <i class="fas fa-user-shield"></i>
+                            Privacy Policy
+                        </a>
+                        <a href="cookie-policy.html" class="privacy-link">
+                            <i class="fas fa-cookie-bite"></i>
+                            Cookie Policy
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="footer-copyright">
+                        <p>&copy; 2024 Inqueerium. Open source research for community empowerment.</p>
+                        <p class="footer-subtitle">Built with <i class="fas fa-heart rainbow-text pulse"></i> for the community, by the community</p>
+                    </div>
+                    <div class="footer-badges">
+                        <div class="badge open-source">
+                            <i class="fab fa-github"></i>
+                            <span>Open Source</span>
+                        </div>
+                        <div class="badge community-driven">
+                            <i class="fas fa-users"></i>
+                            <span>Community Driven</span>
+                        </div>
+                        <div class="badge anonymous">
+                            <i class="fas fa-user-secret"></i>
+                            <span>Anonymous</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Enhanced Social Sharing Functions
+        function copyLink() {
+            const url = window.location.href;
+            const copyBtn = document.querySelector('.social-btn.copy-link');
+            
+            if (navigator.clipboard && window.isSecureContext) {
+                // Use modern clipboard API
+                navigator.clipboard.writeText(url).then(() => {
+                    showCopySuccess(copyBtn);
+                }).catch(() => {
+                    fallbackCopyTextToClipboard(url, copyBtn);
+                });
+            } else {
+                // Fallback for older browsers
+                fallbackCopyTextToClipboard(url, copyBtn);
+            }
+        }
+
+        function fallbackCopyTextToClipboard(text, copyBtn) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.top = "0";
+            textArea.style.left = "0";
+            textArea.style.position = "fixed";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            
+            try {
+                document.execCommand('copy');
+                showCopySuccess(copyBtn);
+            } catch (err) {
+                console.error('Fallback: Could not copy text: ', err);
+            }
+            
+            document.body.removeChild(textArea);
+        }
+
+        function showCopySuccess(copyBtn) {
+            copyBtn.classList.add('copied');
+            const originalText = copyBtn.querySelector('span').textContent;
+            copyBtn.querySelector('span').textContent = 'Copied!';
+            
+            setTimeout(() => {
+                copyBtn.classList.remove('copied');
+                copyBtn.querySelector('span').textContent = originalText;
+            }, 2000);
+        }
+
+        function shareOnTwitter() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent('Join Inqueerium - Understanding LGBTQ+ Experiences in India. Anonymous, community-driven research for positive change. 🏳️‍🌈');
+            const hashtags = encodeURIComponent('LGBTQ,India,Research,Community,Equality');
+            
+            const xUrl = `https://x.com/intent/tweet?url=${url}&text=${text}&hashtags=${hashtags}`;
+            window.open(xUrl, '_blank', 'width=600,height=400');
+        }
+
+        function shareOnReddit() {
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent('Inqueerium: Anonymous LGBTQ+ Research Study for India');
+            
+            const redditUrl = `https://www.reddit.com/submit?url=${url}&title=${title}`;
+            window.open(redditUrl, '_blank', 'width=800,height=600');
+        }
+
+        function shareOnDiscord() {
+            // Discord doesn't have a direct share URL, so we'll copy a formatted message
+            const url = window.location.href;
+            const message = `🏳️‍🌈 **Inqueerium: Understanding LGBTQ+ Experiences in India**\n\nAnonymous, community-driven research study to amplify LGBTQ+ voices across India.\n\n${url}\n\n#LGBTQ #India #Research #Community`;
+            
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(message).then(() => {
+                    alert('Discord message copied to clipboard! Paste it in your Discord server or DM.');
+                }).catch(() => {
+                    prompt('Copy this message for Discord:', message);
+                });
+            } else {
+                prompt('Copy this message for Discord:', message);
+            }
+        }
+
+        // Add event listeners for keyboard accessibility
+        document.addEventListener('DOMContentLoaded', function() {
+            const socialButtons = document.querySelectorAll('.social-btn');
+            socialButtons.forEach(button => {
+                button.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        button.click();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

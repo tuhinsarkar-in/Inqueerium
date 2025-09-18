@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y3YFCDMB9L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y3YFCDMB9L');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inqueerium - Understanding LGBTQ+ Experiences in India</title>
+    <meta name="description" content="Inqueerium: Anonymous, open-source research study about LGBTQ+ lives in India. Community-driven research for awareness and advocacy.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Data Access Section Styles */
+        .data-access-section {
+            margin: 2.5rem 0;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: 2px solid var(--border-color);
+        }
+
+        .data-access-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .access-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .access-title h4 {
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 0 0.5rem 0;
+        }
+
+        .access-title p {
+            color: var(--text-secondary);
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .data-sources {
+            margin-bottom: 2rem;
+        }
+
+        .sheets-main-card {
+            background: var(--bg-primary);
+            border: 3px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sheets-main-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #4285f4, #34a853, #fbbc05, #ea4335);
+        }
+
+        .sheets-main-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+            border-color: #4285f4;
+        }
+
+        .sheets-hero {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .sheets-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .google-logo {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.4rem;
+        }
+
+        .sheets-logo {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #0f9d58 0%, #34a853 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .sheets-title h5 {
+            color: var(--text-primary);
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 0 0 0.5rem 0;
+        }
+
+        .sheets-title p {
+            color: var(--text-secondary);
+            margin: 0 0 0.8rem 0;
+            font-size: 1rem;
+        }
+
+        .live-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .pulse-dot {
+            width: 10px;
+            height: 10px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: live-pulse 2s infinite;
+        }
+
+        @keyframes live-pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.2); }
+        }
+
+        .live-text {
+            color: #10b981;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .sheets-features {
+            margin: 2rem 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            border-color: #4285f4;
+            transform: translateY(-1px);
+        }
+
+        .feature-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .feature-content h6 {
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 0 0 0.3rem 0;
+        }
+
+        .feature-content p {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            margin: 0;
+        }
+
+
+
+        .sheets-actions {
+            margin-top: 2rem;
+        }
+
+        .primary-sheets-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 1.2rem 1.5rem;
+            background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-bottom: 1rem;
+        }
+
+        .primary-sheets-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(66, 133, 244, 0.4);
+        }
+
+        .btn-content {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .btn-content i {
+            font-size: 1.4rem;
+        }
+
+        .btn-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .btn-title {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .btn-subtitle {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+
+        /* Enhanced Social Sharing Styles */
+        .social-btn.copy-link {
+            background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            /* Ensure button inherits the same styling as anchor tags */
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: white;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            outline: none;
+        }
+
+        .social-btn.copy-link:hover {
+            background: linear-gradient(135deg, #5a62ff 0%, #0006e6 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(107, 115, 255, 0.3);
+        }
+
+        .social-btn.copy-link:focus {
+            outline: 2px solid #6b73ff;
+            outline-offset: 2px;
+        }
+
+        .social-btn.copy-link.copied {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+
+        .social-btn.copy-link.copied::after {
+            content: '✓ Copied!';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            white-space: nowrap;
+            z-index: 10;
+        }
+
+        .social-btn.twitter {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            color: white;
+        }
+
+        .social-btn.twitter:hover {
+            background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            color: white;
+        }
+
+        .social-btn.reddit {
+            background: linear-gradient(135deg, #ff4500 0%, #e63e00 100%);
+            color: white;
+        }
+
+        .social-btn.reddit:hover {
+            background: linear-gradient(135deg, #e63e00 0%, #cc3700 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 69, 0, 0.3);
+            color: white;
+        }
+
+        .social-btn.discord {
+            background: linear-gradient(135deg, #7289da 0%, #5865f2 100%);
+            color: white;
+        }
+
+        .social-btn.discord:hover {
+            background: linear-gradient(135deg, #677bc4 0%, #4752c4 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(114, 137, 218, 0.3);
+            color: white;
+        }
+
+        /* Ensure all social buttons have consistent focus states */
+        .social-btn:focus {
+            outline: 2px solid currentColor;
+            outline-offset: 2px;
+        }
+
+        /* Logo Link Styling */
+        .logo-link {
+            text-decoration: none;
+            color: inherit;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .logo-link:hover {
+            text-decoration: none;
+            color: inherit;
+            transform: translateY(-1px);
+        }
+
+        .logo-link:focus {
+            outline: 2px solid var(--primary-color, #667eea);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        .data-access-footer {
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--border-color);
+            text-align: center;
+        }
+
+        .privacy-reminder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        .privacy-reminder i {
+            color: #10b981;
+            font-size: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .data-access-section {
+                padding: 1.5rem;
+                margin: 1.5rem 0;
+            }
+
+            .data-access-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .sheets-main-card {
+                padding: 1.5rem;
+            }
+
+            .sheets-hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+
+            .feature-item {
+                padding: 0.8rem;
+            }
+
+
+
+            .btn-content {
+                gap: 0.8rem;
+            }
+
+            .btn-content i {
+                font-size: 1.2rem;
+            }
+
+            .btn-title {
+                font-size: 0.95rem;
+            }
+
+            .btn-subtitle {
+                font-size: 0.75rem;
+            }
+
+            .privacy-reminder {
+                flex-direction: column;
+                gap: 0.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cookie Notice -->
+    <div id="cookie-notice" class="cookie-notice">
+        <div class="cookie-popup">
+            <div class="cookie-header">
+                <i class="fas fa-cookie-bite"></i>
+                <h3>Cookie Notice</h3>
+            </div>
+            <div class="cookie-body">
+                <p>We use cookies to track demographic data for our research study. This helps us understand participation patterns and ensure representative data collection.</p>
+                <ul class="cookie-details">
+                    <li><i class="fas fa-shield-alt"></i> Your personal data remains completely anonymous</li>
+                    <li><i class="fas fa-chart-line"></i> Only aggregated demographic statistics are collected</li>
+                    <li><i class="fas fa-lock"></i> No personally identifiable information is stored</li>
+                </ul>
+                <p class="cookie-footer">By continuing to use this site, you consent to our use of cookies for research purposes.</p>
+            </div>
+            <div class="cookie-actions">
+                <button onclick="closeCookieNotice()" class="cookie-accept">Accept & Continue</button>
+                <button onclick="learnMoreCookies()" class="cookie-learn-more">Learn More</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Welcome Safety Message -->
+    <div id="welcome-message" class="welcome-modal">
+        <div class="welcome-overlay"></div>
+        <div class="welcome-content">
+            <div class="welcome-header">
+                <h3>Quick Exit Information</h3>
+                <button class="welcome-close" onclick="closeWelcomeMessage()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="welcome-body">
+                <p>Click on the <strong>Quick Exit</strong> button on the navigation bar or press the <strong>ESC</strong> button three times to quickly leave our site.</p>
+            </div>
+            <div class="welcome-footer">
+                <button onclick="closeWelcomeMessage()" class="welcome-btn">Got it</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <span class="logo-text">Inqueerium</span>
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#results" class="nav-link">Results</a>
+                <a href="survey.html" class="nav-link survey-btn">Take the Survey</a>
+                <button id="emergency-exit" class="emergency-btn" title="Emergency Exit - Instantly redirect to Google">
+                    <i class="fas fa-sign-out-alt"></i> QUICK EXIT
+                </button>
+                <button id="theme-toggle" class="theme-toggle" title="Toggle Dark Mode">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content fade-in">
+                <h1 class="hero-title fade-in">Inqueerium: Understanding LGBTQ+ Experiences in India</h1>
+                <p class="hero-subtitle fade-in fade-in-delay-1">
+                    An anonymous, open-source, community-driven research study to amplify LGBTQ+ voices and experiences across India.
+                </p>
+                <div class="hero-buttons">
+                    <a href="survey.html" class="cta-btn primary-btn">
+                        <i class="fas fa-clipboard-list"></i>
+                        Take the Survey
+                    </a>
+                    <a href="#about" class="cta-btn secondary-btn">
+                        <i class="fas fa-info-circle"></i>
+                        Learn More
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="pride-map-container">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/LGBT_flag_map_of_India.svg" 
+                         alt="LGBT Pride Flag Map of India" 
+                         class="pride-map-image"
+                         loading="lazy">
+                    <div class="map-overlay">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section - Enhanced -->
+    <section id="about" class="about">
+        <div class="container">
+            <!-- Hero Header -->
+            <div class="about-hero fade-in">
+                <div class="hero-content">
+                    <h2>Why This Study Matters</h2>
+                    <p class="hero-subtitle">Amplifying voices, driving change, building understanding</p>
+                    
+                </div>
+            </div>
+
+            <!-- Core Values Grid -->
+            <div class="values-grid">
+                <div class="value-card fade-in" data-tilt>
+                    <div class="card-header">
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="icon-bg"></div>
+                        </div>
+                        <div class="card-badge">Priority #1</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Complete Anonymity</h3>
+                        <p>Responses are strictly anonymous. No personally identifiable information is collected. Your privacy and safety are our top priorities.</p>
+                        <div class="security-meter">
+                            <div class="meter-bar"></div>
+                            <span class="meter-label">100% Secure</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="value-card fade-in" data-tilt>
+                    <div class="card-header">
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="icon-bg"></div>
+                        </div>
+                        <div class="card-badge">By Community</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Community-Driven</h3>
+                        <p>Inqueerium is led by and for the LGBTQ+ community in India. Every voice matters in building a more inclusive society.</p>
+                        <div class="community-visual">
+                            <div class="voice-indicators">
+                                <span class="voice-dot"></span>
+                                <span class="voice-dot"></span>
+                                <span class="voice-dot"></span>
+                                <span class="voice-dot"></span>
+                            </div>
+                            <span class="community-label">Every Voice Counts</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="value-card fade-in" data-tilt>
+                    <div class="card-header">
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="icon-bg"></div>
+                        </div>
+                        <div class="card-badge">Transparent</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Open Results</h3>
+                        <p>Aggregated results will be publicly available for research, activism, and awareness. Transparency is key to meaningful change.</p>
+                        <div class="transparency-indicator">
+                            <div class="data-flow">
+                                <span class="flow-dot"></span>
+                                <span class="flow-dot"></span>
+                                <span class="flow-dot"></span>
+                            </div>
+                            <span class="transparency-label">Open Access</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission Statement -->
+            <div class="mission-section fade-in">
+                <div class="mission-container">
+                    <div class="mission-header">
+                        <div class="mission-icon">
+                            <i class="fas fa-heart"></i>
+                            <div class="heart-pulse"></div>
+                        </div>
+                        <h3>Our Mission</h3>
+                    </div>
+                    
+                    <div class="mission-content">
+                        <p class="mission-intro">
+                            Inqueerium exists to document and understand the diverse experiences of LGBTQ+ individuals across India. 
+                            By collecting anonymous stories and data, we aim to create meaningful change through:
+                        </p>
+                        
+                        <div class="goals-grid">
+                            <div class="goal-item">
+                                <div class="goal-icon">
+                                    <i class="fas fa-microscope"></i>
+                                </div>
+                                <div class="goal-content">
+                                    <h4>Evidence-Based Insights</h4>
+                                    <p>Provide researchers and advocates with concrete data to support their work</p>
+                                </div>
+                            </div>
+                            
+                            <div class="goal-item">
+                                <div class="goal-icon">
+                                    <i class="fas fa-bullhorn"></i>
+                                </div>
+                                <div class="goal-content">
+                                    <h4>Amplify Community Voices</h4>
+                                    <p>Highlight both challenges and triumphs of our diverse community</p>
+                                </div>
+                            </div>
+                            
+                            <div class="goal-item">
+                                <div class="goal-icon">
+                                    <i class="fas fa-gavel"></i>
+                                </div>
+                                <div class="goal-content">
+                                    <h4>Policy Impact</h4>
+                                    <p>Support policy discussions with authentic community data</p>
+                                </div>
+                            </div>
+                            
+                          
+                        </div>
+                        
+                        <div class="call-to-action">
+                            <div class="cta-content">
+                                <h4>Your Voice Matters</h4>
+                                <p>Your participation helps build a comprehensive picture of LGBTQ+ life in India, contributing to better support systems and policies for our community.</p>
+                            </div>
+                            <div class="participation-visual">
+                                <div class="impact-meter">
+                                    <div class="meter-fill"></div>
+                                </div>
+                                <span class="impact-label">Building Change Together</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section - Enhanced -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <!-- FAQ Hero -->
+            <div class="faq-hero fade-in">
+                <div class="faq-icon-wrapper">
+                    <div class="faq-icon">
+                        <i class="fas fa-question-circle"></i>
+                        <div class="icon-pulse"></div>
+                    </div>
+                </div>
+                <h2>Frequently Asked Questions</h2>
+                <p class="faq-subtitle">Everything you need to know about participating</p>
+                <div class="faq-stats">
+                    <div class="faq-stat">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">Common Questions</span>
+                    </div>
+                    <div class="faq-stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Transparency</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ List - Continuous Layout -->
+            <div class="faq-container">
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <div class="question-content">
+                            <div class="question-icon">
+                                <i class="fas fa-user-secret"></i>
+                            </div>
+                            <h4>Is this survey anonymous?</h4>
+                        </div>
+                        <div class="expand-indicator">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <div class="answer-highlight">
+                                <i class="fas fa-check-circle"></i>
+                                <span>100% Anonymous</span>
+                            </div>
+                            <p>Yes, completely. We don't collect names, email addresses, phone numbers, or any information that could identify you. Your responses are stored securely and will only be used in aggregate form for research purposes.</p>
+                            <div class="answer-tags">
+                                <span class="tag">No Personal Data</span>
+                                <span class="tag">Secure Storage</span>
+                                <span class="tag">Aggregate Only</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <div class="question-content">
+                            <div class="question-icon">
+                                <i class="fas fa-rainbow"></i>
+                            </div>
+                            <h4>Who can take part in this study?</h4>
+                        </div>
+                        <div class="expand-indicator">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <div class="answer-highlight">
+                                <i class="fas fa-heart"></i>
+                                <span>All LGBTQ+ Identities</span>
+                            </div>
+                            <p>Anyone who identifies as LGBTQ+ and currently lives in India can participate. This includes all sexual orientations, gender identities, and expressions within the LGBTQ+ spectrum.</p>
+                            <div class="answer-tags">
+                                <span class="tag">All Identities</span>
+                                <span class="tag">India Residents</span>
+                                <span class="tag">Inclusive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <div class="question-content">
+                            <div class="question-icon">
+                                <i class="fas fa-share-alt"></i>
+                            </div>
+                            <h4>How will the data be shared?</h4>
+                        </div>
+                        <div class="expand-indicator">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <div class="answer-highlight">
+                                <i class="fas fa-globe"></i>
+                                <span>Open Research</span>
+                            </div>
+                            <p>Aggregated, anonymized results will be made publicly available through this website and open research platforms. Individual responses will never be shared. The data will be used for academic research, advocacy, and community awareness.</p>
+                            <div class="answer-tags">
+                                <span class="tag">Public Results</span>
+                                <span class="tag">No Individual Data</span>
+                                <span class="tag">Open Access</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <div class="question-content">
+                            <div class="question-icon">
+                                <i class="fas fa-eye-slash"></i>
+                            </div>
+                            <h4>Can I skip sensitive questions?</h4>
+                        </div>
+                        <div class="expand-indicator">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <div class="answer-highlight">
+                                <i class="fas fa-hand-paper"></i>
+                                <span>Your Choice</span>
+                            </div>
+                            <p>Absolutely. Every question is optional. You can skip any question that makes you uncomfortable or doesn't apply to your experience. Partial responses are still valuable and appreciated.</p>
+                            <div class="answer-tags">
+                                <span class="tag">All Optional</span>
+                                <span class="tag">Your Comfort</span>
+                                <span class="tag">Partial OK</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <div class="question-content">
+                            <div class="question-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h4>How long does the survey take?</h4>
+                        </div>
+                        <div class="expand-indicator">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <div class="answer-highlight">
+                                <i class="fas fa-stopwatch"></i>
+                                <span>10-15 Minutes</span>
+                            </div>
+                            <p>The survey typically takes 10-15 minutes to complete. You can take breaks and return to it later if needed. Your progress will be saved automatically.</p>
+                            <div class="answer-tags">
+                                <span class="tag">Quick & Easy</span>
+                                <span class="tag">Auto Save</span>
+                                <span class="tag">Take Breaks</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <div class="question-content">
+                            <div class="question-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <h4>Is this affiliated with any government or institution?</h4>
+                        </div>
+                        <div class="expand-indicator">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <div class="answer-highlight">
+                                <i class="fas fa-hands-helping"></i>
+                                <span>Community-Led</span>
+                            </div>
+                            <p>No, this is a completely independent, community-led initiative. We are not affiliated with any government body, institution, or organization that could compromise your anonymity or safety.</p>
+                            <div class="answer-tags">
+                                <span class="tag">Independent</span>
+                                <span class="tag">Community-Led</span>
+                                <span class="tag">No Affiliation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Footer -->
+            <div class="faq-footer fade-in">
+                <div class="faq-footer-content">
+                    <div class="footer-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h4>Still have questions?</h4>
+                    <p>If you need more information or have concerns not covered here, please don't hesitate to reach out through our community channels.</p>
+                    <div class="faq-actions">
+                        <button class="contact-btn">
+                            <i class="fas fa-envelope"></i>
+                            Contact Us
+                        </button>
+                        <button class="expand-all-btn" id="expand-all-faq">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                            Expand All
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="results">
+        <div class="container">
+           
+            <!-- Results Preview Card -->
+            <div class="results-preview fade-in">
+                <div class="results-hero">
+                    <div class="results-icon">
+                        <i class="fas fa-chart-line"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Results Coming Soon</h3>
+                    <p class="results-description">Once enough responses are collected, anonymized results and interactive charts will appear here. We're committed to transparency and will share all findings with the community.</p>
+                </div>
+                
+                <!-- Interactive Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-number" id="response-counter">Open</span>
+                            <span class="stat-label">For Everyone</span>
+                        </div>
+                        <div class="stat-progress">
+                            <div class="progress-bar" data-progress="100"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Anonymous</span>
+                        </div>
+                        <div class="security-indicator">
+                            <div class="security-dots">
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                                <span class="dot active"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label">Impact Potential</span>
+                        </div>
+                        <div class="impact-visual">
+                            <div class="ripple-effect"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Survey Response Data Access -->
+                <div class="data-access-section">
+                    <div class="data-access-header">
+                        <div class="access-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="access-title">
+                            <h4>Access Survey Response Data</h4>
+                            <p>View all anonymous community responses in real-time</p>
+                        </div>
+                    </div>
+                    
+                    <div class="data-sources">
+                        <!-- Enhanced Google Sheets Access -->
+                        <div class="sheets-main-card">
+                            <div class="sheets-hero">
+                                <div class="sheets-brand">
+                                    <div class="google-logo">
+                                        <i class="fab fa-google"></i>
+                                    </div>
+                                    <div class="sheets-logo">
+                                        <i class="fas fa-table"></i>
+                                    </div>
+                                </div>
+                                <div class="sheets-title">
+                                    <h5>Survey Response Database</h5>
+                                    <p>Complete Google Sheets with all anonymous community responses</p>
+                                    <div class="live-indicator">
+                                        <span class="pulse-dot"></span>
+                                        <span class="live-text">Live Data • Updated in Real-time</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="sheets-features">
+                                <div class="feature-grid">
+                                    <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-sync-alt"></i>
+                                        </div>
+                                        <div class="feature-content">
+                                            <h6>Real-time Updates</h6>
+                                            <p>See new responses as they come in</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-download"></i>
+                                        </div>
+                                        <div class="feature-content">
+                                            <h6>Export & Download</h6>
+                                            <p>Download data in CSV, Excel, or PDF</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-chart-bar"></i>
+                                        </div>
+                                        <div class="feature-content">
+                                            <h6>Built-in Analytics</h6>
+                                            <p>Google Sheets charts and pivot tables</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-shield-alt"></i>
+                                        </div>
+                                        <div class="feature-content">
+                                            <h6>Privacy Protected</h6>
+                                            <p>All data is completely anonymous</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="sheets-actions">
+                                <a href="https://docs.google.com/spreadsheets/d/1N4lfeeGXrvvug7MGLDrPwYjuX3TCaxrGUrrcNnOePtw/edit?usp=sharing" 
+                                   target="_blank" 
+                                   class="primary-sheets-btn">
+                                    <div class="btn-content">
+                                        <i class="fab fa-google"></i>
+                                        <div class="btn-text">
+                                            <span class="btn-title">Open in Google Sheets</span>
+                                            <span class="btn-subtitle">Access full database</span>
+                                        </div>
+                                    </div>
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="data-access-footer">
+                        <div class="privacy-reminder">
+                            <i class="fas fa-user-secret"></i>
+                            <span>All data is completely anonymous and aggregated for privacy protection</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coming Soon Features -->
+                <div class="upcoming-features">
+                    <h4>What's Coming</h4>
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>Interactive Demographics</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <span>Regional Insights</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-download"></i>
+                            <span>Downloadable Reports</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Settings Panel (Hidden by default) -->
+    <div id="admin-panel" class="admin-panel">
+        <div class="admin-content">
+            <div class="admin-header">
+                <h3>
+                    <i class="fas fa-cog"></i>
+                    Admin Settings
+                </h3>
+                <button class="close-admin" id="close-admin">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="admin-section">
+                <h4>Google Sheets Integration</h4>
+                <div class="setting-group">
+                    <label for="sheets-url">Google Sheets URL:</label>
+                    <div class="input-group">
+                        <input type="url" id="sheets-url" placeholder="https://docs.google.com/spreadsheets/d/..." />
+                        <button class="test-connection" id="test-connection">
+                            <i class="fas fa-plug"></i>
+                            Test
+                        </button>
+                    </div>
+                    <p class="help-text">Enter the published Google Sheets URL to display live response data</p>
+                </div>
+                
+                <div class="setting-group">
+                    <label for="refresh-interval">Auto-refresh Interval (minutes):</label>
+                    <select id="refresh-interval">
+                        <option value="0">Manual only</option>
+                        <option value="5" selected>5 minutes</option>
+                        <option value="10">10 minutes</option>
+                        <option value="30">30 minutes</option>
+                        <option value="60">1 hour</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="admin-section">
+                <h4>Display Settings</h4>
+                <div class="setting-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="show-live-data" checked>
+                        <span class="checkmark"></span>
+                        Show live data in Results section
+                    </label>
+                </div>
+                <div class="setting-group">
+                    <label for="max-responses">Max responses to display:</label>
+                    <input type="number" id="max-responses" value="10" min="5" max="50" />
+                </div>
+            </div>
+            
+            <div class="admin-actions">
+                <button class="save-settings" id="save-settings">
+                    <i class="fas fa-save"></i>
+                    Save Settings
+                </button>
+                <button class="reset-settings" id="reset-settings">
+                    <i class="fas fa-undo"></i>
+                    Reset to Default
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Access Button (Hidden, accessible via Konami code or URL parameter) -->
+    <div id="admin-trigger" class="admin-trigger" style="display: none;">
+        <button id="open-admin">
+            <i class="fas fa-cog"></i>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-rainbow-bg"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-heart rainbow-text"></i>
+                        </div>
+                        <h3>Inqueerium</h3>
+                    </div>
+                    <p class="footer-tagline">Community-led research for positive change and equality</p>
+                    <div class="footer-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">All</span>
+                            <span class="stat-label">Voices Matter</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">28</span>
+                            <span class="stat-label">States</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label">Impact</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section footer-links">
+                    <h4>Quick Links</h4>
+                    <div class="footer-nav">
+                        <a href="#home" class="footer-link">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                        <a href="#about" class="footer-link">
+                            <i class="fas fa-info-circle"></i>
+                            <span>About</span>
+                        </a>
+                        <a href="survey.html" class="footer-link">
+                            <i class="fas fa-clipboard-list"></i>
+                            <span>Survey</span>
+                        </a>
+                        <a href="#results" class="footer-link">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Results</span>
+                        </a>
+                        <a href="#faq" class="footer-link">
+                            <i class="fas fa-question-circle"></i>
+                            <span>FAQ</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section footer-social">
+                    <h4>Share & Connect</h4>
+                    <p class="social-description">Help us reach more voices in the community</p>
+                    <div class="social-buttons">
+                        <button class="social-btn copy-link" onclick="copyLink()" data-tooltip="Copy Link to Share">
+                            <i class="fas fa-link"></i>
+                            <span>Copy Link</span>
+                        </button>
+                        <a href="#" class="social-btn twitter" onclick="shareOnTwitter()" data-tooltip="Share on X (Formerly Twitter)">
+                            <i class="fab fa-x-twitter"></i>
+                            <span>X (Formerly Twitter)</span>
+                        </a>
+                        <a href="#" class="social-btn reddit" onclick="shareOnReddit()" data-tooltip="Share on Reddit">
+                            <i class="fab fa-reddit"></i>
+                            <span>Reddit</span>
+                        </a>
+                        <a href="#" class="social-btn discord" onclick="shareOnDiscord()" data-tooltip="Share on Discord">
+                            <i class="fab fa-discord"></i>
+                            <span>Discord</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section footer-info">
+                    <h4>Important Notice</h4>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <p>This study is community-led and not affiliated with any government or institution. Your participation is completely voluntary and anonymous.</p>
+                        </div>
+                    </div>
+                    <div class="privacy-links">
+                        <a href="privacy-policy.html" class="privacy-link">
+                            <i class="fas fa-user-shield"></i>
+                            Privacy Policy
+                        </a>
+                        <a href="cookie-policy.html" class="privacy-link">
+                            <i class="fas fa-cookie-bite"></i>
+                            Cookie Policy
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="footer-copyright">
+                        <p>&copy; 2024 Inqueerium. Open source research for community empowerment.</p>
+                        <p class="footer-subtitle">Built with <i class="fas fa-heart rainbow-text pulse"></i> for the community, by the community</p>
+                    </div>
+                    <div class="footer-badges">
+                        <div class="badge open-source">
+                            <i class="fab fa-github"></i>
+                            <span>Open Source</span>
+                        </div>
+                        <div class="badge community-driven">
+                            <i class="fas fa-users"></i>
+                            <span>Community Driven</span>
+                        </div>
+                        <div class="badge anonymous">
+                            <i class="fas fa-user-secret"></i>
+                            <span>Anonymous</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Enhanced Social Sharing Functions
+        function copyLink() {
+            const url = window.location.href;
+            const copyBtn = document.querySelector('.social-btn.copy-link');
+            
+            if (navigator.clipboard && window.isSecureContext) {
+                // Use modern clipboard API
+                navigator.clipboard.writeText(url).then(() => {
+                    showCopySuccess(copyBtn);
+                }).catch(() => {
+                    fallbackCopyTextToClipboard(url, copyBtn);
+                });
+            } else {
+                // Fallback for older browsers
+                fallbackCopyTextToClipboard(url, copyBtn);
+            }
+        }
+
+        function fallbackCopyTextToClipboard(text, copyBtn) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.top = "0";
+            textArea.style.left = "0";
+            textArea.style.position = "fixed";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            
+            try {
+                document.execCommand('copy');
+                showCopySuccess(copyBtn);
+            } catch (err) {
+                console.error('Fallback: Could not copy text: ', err);
+            }
+            
+            document.body.removeChild(textArea);
+        }
+
+        function showCopySuccess(copyBtn) {
+            copyBtn.classList.add('copied');
+            const originalText = copyBtn.querySelector('span').textContent;
+            copyBtn.querySelector('span').textContent = 'Copied!';
+            
+            setTimeout(() => {
+                copyBtn.classList.remove('copied');
+                copyBtn.querySelector('span').textContent = originalText;
+            }, 2000);
+        }
+
+        function shareOnTwitter() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent('Join Inqueerium - Understanding LGBTQ+ Experiences in India. Anonymous, community-driven research for positive change. 🏳️‍🌈');
+            const hashtags = encodeURIComponent('LGBTQ,India,Research,Community,Equality');
+            
+            const xUrl = `https://x.com/intent/tweet?url=${url}&text=${text}&hashtags=${hashtags}`;
+            window.open(xUrl, '_blank', 'width=600,height=400');
+        }
+
+        function shareOnReddit() {
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent('Inqueerium: Anonymous LGBTQ+ Research Study for India');
+            
+            const redditUrl = `https://www.reddit.com/submit?url=${url}&title=${title}`;
+            window.open(redditUrl, '_blank', 'width=800,height=600');
+        }
+
+        function shareOnDiscord() {
+            // Discord doesn't have a direct share URL, so we'll copy a formatted message
+            const url = window.location.href;
+            const message = `🏳️‍🌈 **Inqueerium: Understanding LGBTQ+ Experiences in India**\n\nAnonymous, community-driven research study to amplify LGBTQ+ voices across India.\n\n${url}\n\n#LGBTQ #India #Research #Community`;
+            
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(message).then(() => {
+                    alert('Discord message copied to clipboard! Paste it in your Discord server or DM.');
+                }).catch(() => {
+                    prompt('Copy this message for Discord:', message);
+                });
+            } else {
+                prompt('Copy this message for Discord:', message);
+            }
+        }
+
+        // Add event listeners for keyboard accessibility
+        document.addEventListener('DOMContentLoaded', function() {
+            const socialButtons = document.querySelectorAll('.social-btn');
+            socialButtons.forEach(button => {
+                button.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        button.click();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
